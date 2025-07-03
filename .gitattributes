@@ -1,0 +1,12 @@
+#------------------------------------------------------------------------------
+# Git attributes configuration
+# Enables automatic end-of-line normalization and syntax-aware diffs
+#------------------------------------------------------------------------------
+
+# Auto-detect text files and normalize line endings
+*               text=auto
+
+# Enable syntax highlighting for Rust-related files
+*.rs            text diff=rust
+*.toml          text diff=toml
+Cargo.lock      text

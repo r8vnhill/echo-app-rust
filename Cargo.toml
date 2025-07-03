@@ -1,0 +1,35 @@
+[package]
+# The name of the package as it will appear on crates.io.
+name = "echo_app_rust"
+# The initial version of the package using Semantic Versioning (SemVer).
+version = "0.1.0"
+# The Rust edition to use for this crate. 2024 is the latest at the time of writing.
+edition = "2024"
+# List of authors/maintainers of the package.
+authors = ["Ignacio Slater-Muñoz <reachme@ravenhill.cl>"]
+# A short description of what this package does.
+description = "A basic echo app implemented in Rust."
+# The license under which this package is distributed. "BSD-2" is a permissive license.
+license = "BSD-2"
+# URL of the source code repository.
+repository = "https://github.com/r8vnhill/echo-app-rust"
+# Keywords to help users find this package on crates.io.
+keywords = ["echo", "cli", "example", "learning"]
+# Crates.io categories used for discoverability. Must match one of the official categories.
+categories = ["command-line-utilities"]
+
+[profile.dev]
+# Optimization level for dev builds (0 = no optimizations).
+opt-level = 0
+# Enable integer overflow checks in debug mode.
+overflow-checks = true
+# Enable debug info generation for debugging tools.
+debug = true
+
+[profile.release]
+# Optimization level for release builds (3 = full optimizations).
+opt-level = 3
+# Enable Link Time Optimization for better performance.
+lto = true
+# Use a single codegen unit for better optimization at the cost of slower compile times.
+codegen-units = 1
